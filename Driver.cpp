@@ -1,52 +1,37 @@
+#include "Driver.h"
 #include <string>
 using namespace std;
 
-struct Date{
-    int day;
-    int month;
-    int year;
-};
+/*
+int licenseNum;
+string name;
+int age;
+Date dob;
+string jobType;
+Address resAddress;
+Date issuanceDate;
+string county;
+Ticket* tickets;
+int ticketCount;
+string frequentLocation;
+string medicalConditions;
+int yrsOfExp;
+*/
 
-struct Address{
-    int houseNum;
-    string street;
-    int zip;
-    string city;
-    string state;
-};
+Driver::Driver(string name, int age, Date dob) {
 
-struct Ticket{
-    string location;
-    Date issueDate;
-};
+}
 
-class Driver{
-    private:
-    int licenseNum;
-    string name;
-    int age;
-    Date dob;
-    string jobType;
-    Address resAddress;
-    Date issuanceDate;
-    string county;
-    Ticket* tickets;
-    int ticketCount;
-    string frequentLocation;
-    string medicalConditions;
-    int yrsOfExp;
+void Driver::addTicket(Ticket newTicket){
 
-    public:
-    void addTicket(Ticket newTicket){
+}
 
-    }
+int Driver::getAge(){
+    return age;
+}
 
-    int GetAge(){
-        return age;
-    }
+string Driver::getExperienceCategory(){
+    
+}
 
-    string GetExperienceCategory(){
-        
-    }
 
-};
