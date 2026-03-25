@@ -24,26 +24,34 @@ struct Ticket{
 
 class Driver{
     private:
-
+        //auto made
         int licenseNum;
+        int yrsOfExp;
+        int ticketCount;
+
+        //manual set
         string name;
         int age;
         Date dob;
-        string jobType;
         Address resAddress;
-        Date issuanceDate;
         string county;
-        Ticket* tickets;
-        int ticketCount;
-        string frequentLocation;
+        
+        Date issuanceDate;
         string medicalConditions;
-        int yrsOfExp;
+        string jobType;
 
+        //seperate
+        Ticket* tickets;
+        string frequentLocation;
+        
     public:
 
-        Driver(string name, int age, Date dob);
-
-        void addTicket(Ticket newTicket);
+        Driver(string name, int age, Date dob, string jobType, Address redAddress, string county);
+        // setIssuance and setLicenseNum only if it's an already existing liscence
+        void setIssuanceDate(Date issuanceDate);
+        void setLicenseNum(int licenseNum);
+        void setJobType(string jobType);
+        void setMedicalConditions(string medicalConditions);
 
         int getAge();
 
