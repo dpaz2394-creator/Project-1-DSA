@@ -3,9 +3,12 @@
 #include "Driver.h"
 
 struct LinkedListNode{
-    Driver* driver;
+    Driver driverData;
     LinkedListNode* next;
     LinkedListNode* prev;
+
+    LinkedListNode();
+    LinkedListNode(Driver d);
 };
 
 class LinkedList{
@@ -14,6 +17,8 @@ class LinkedList{
     LinkedListNode* tail;
 
     public:
+
+    LinkedList();
 
     void insert(Driver driverData);
     void remove(Driver driverData);

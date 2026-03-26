@@ -45,7 +45,7 @@ class Driver{
         string frequentLocation;
         
     public:
-
+        Driver();
         Driver(string name, int age, Date dob, string jobType, Address redAddress, string county);
         // setIssuance and setLicenseNum only if it's an already existing liscence
         void setIssuanceDate(Date issuanceDate);

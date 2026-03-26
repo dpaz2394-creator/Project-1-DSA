@@ -10,6 +10,19 @@ int ticketCount;
 string frequentLocation;
 */
 
+Driver::Driver(){
+    this->name = " ";
+    this->age = 0;
+    this->dob = Date{0,0,0};
+    this->resAddress = Address{};
+    issuanceDate = Date{0, 0, 0};
+    yrsOfExp = 0;
+    licenseNum = 0;
+    medicalConditions = " ";
+    jobType = " ";
+
+}
+
 Driver::Driver(string name, int age, Date dob, string jobType, Address redAddress, string county) {
     this->name = name;
     this->age = age;
