@@ -23,6 +23,9 @@ class LinkedList{
     void insert(Driver driverData);
     void remove(Driver driverData);
 
+    void getXFromHead(int n);
+    void getXFromTail(int n);
+
 };
 
 #endif

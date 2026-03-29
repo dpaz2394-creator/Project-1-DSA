@@ -55,6 +55,14 @@ class Driver{
 
         int getAge();
         int getLicenseNum();
+        Date getDob();
+
+        string getName();
+        bool operator==(Driver& rhs);
+        bool operator!=(Driver& rhs);
+
+        Date getIssuanceDate();
+        bool olderIssThan(Driver& rhs);
 
         string getExperienceCategory();
 
