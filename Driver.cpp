@@ -69,6 +69,64 @@ int Driver::getLicenseNum(){
     return licenseNum;
 }
 
+Date Driver::getDob(){
+    return dob;
+}
+
+string Driver::getName(){
+    return name;
+}
+
+bool Driver::operator==(Driver& rhs){
+    //only check name, dob, licenseNum for equality
+    if(name == rhs.getName()){
+        if(dob.year==rhs.getDob().year && dob.month==rhs.getDob().month && dob.day==rhs.getDob().day){
+            if(licenseNum == rhs.getLicenseNum()){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool Driver::operator!=(Driver& rhs){
+    return !(this->operator==(rhs));
+}
+
+Date Driver::getIssuanceDate(){
+    return issuanceDate;
+}
+
+bool Driver::olderIssThan(Driver& rhs){
+    //if lhs has older or same issuance date then rhs, then true. else, false
+
+    if(issuanceDate.year < rhs.getIssuanceDate().year){
+        return true;
+    }
+    else if(issuanceDate.year > rhs.getIssuanceDate().year){
+        return false;
+    }
+    
+    //if its the same year, compare month
+
+    if(issuanceDate.month < rhs.getIssuanceDate().month){
+        return true;
+    }
+    else if(issuanceDate.month > rhs.getIssuanceDate().month){
+        return false;
+    }
+
+    //if its the same month, compare day
+
+    if(issuanceDate.day <= rhs.getIssuanceDate().day){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
+}
+
 string Driver::getExperienceCategory(){
     if(yrsOfExp <= 5){
         return "New driver";
