@@ -1,8 +1,10 @@
-#include "Driver.cpp"
-#include "HashTable.cpp"
-#include "LinkedList.cpp"
+#include "Driver.h"
+#include "HashTable.h"
+#include "LinkedList.h"
 #include "DriverDatabase.h"
 
+DriverDatabase::DriverDatabase() {
+}
 
 void DriverDatabase::addDriver(Driver inDriver){
     //Use Hashtable function to insert driver into hash

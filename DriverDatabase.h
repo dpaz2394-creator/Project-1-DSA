@@ -12,6 +12,7 @@ class DriverDatabase{
     LinkedList licenseList;
 
     public:
+    DriverDatabase();
     void addDriver(Driver inDriver);
 
     void removeDriver(int licenseNum);

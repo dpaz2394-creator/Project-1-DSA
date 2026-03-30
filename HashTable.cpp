@@ -1,5 +1,8 @@
 #include "HashTable.h"
 
+HashTable::HashTable() : HashTable(101) {
+}
+
 HashTable::HashTable(int size){
     tableSize = size;
     table = new HashNode*[tableSize];

@@ -14,6 +14,7 @@ class HashTable{
     int Hash(int licenseNum);
 
     public:
+    HashTable();
     HashTable(int size);
     ~HashTable();
 
